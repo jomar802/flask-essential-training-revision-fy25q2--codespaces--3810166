@@ -4,7 +4,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    user = {'username':'Natasha',
+             'second':'Jomar'
+            }
+    return render_template('index.html', title='Home',user=user)
 
 if __name__ == '__main__':
     app.run(debug=True)
